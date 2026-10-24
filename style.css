@@ -1,0 +1,157 @@
+/*
+Theme Name: Vite for WordPress
+Theme URI: https://github.com/d1oxsnd/vite-for-wordpress
+Author: d1oxsnd
+Author URI: https://github.com/d1oxsnd
+Description: A high-performance WordPress starter theme powered by Vite, TypeScript, and SCSS, optimized for Gutenberg & ACF Blocks.
+Version: 1.0.0
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: starter
+Tags: custom-logo, custom-menu, featured-images, threaded-comments
+*/
+
+/* ==========================================================================
+   1. WordPress Core Accessibility
+   ========================================================================== */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #ffffff;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+.skip-link {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.skip-link:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	background: #000000;
+	color: #ffffff;
+	padding: 0.75rem 1rem;
+	z-index: 999999;
+}
+
+/* ==========================================================================
+   2. WordPress Core Alignments & Media
+   ========================================================================== */
+.alignnone {
+	margin: 1.5em 0;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+.alignleft {
+	float: left;
+	margin: 0.5em 1.5em 1.5em 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0.5em 0 1.5em 1.5em;
+}
+
+.alignwide {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignfull {
+	max-width: 100vw;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+}
+
+.wp-caption {
+	max-width: 100%;
+	margin-bottom: 1.5em;
+}
+
+.wp-caption-text {
+	text-align: center;
+	font-size: 0.875em;
+}
+
+/* Clearfix for post content */
+.entry-content::after,
+.entry-footer::after,
+.comment-content::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* ==========================================================================
+   3. WordPress Admin Bar Offsets
+   ========================================================================== */
+/* Ensures fixed/sticky headers in custom layouts don't hide behind admin bar */
+.admin-bar .site-header.is-sticky,
+.admin-bar .site-header.is-fixed,
+.admin-bar .sticky-header,
+.admin-bar [data-sticky="true"] {
+	top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+	.admin-bar .site-header.is-sticky,
+	.admin-bar .site-header.is-fixed,
+	.admin-bar .sticky-header,
+	.admin-bar [data-sticky="true"] {
+		top: 46px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.admin-bar .site-header.is-sticky,
+	.admin-bar .site-header.is-fixed,
+	.admin-bar .sticky-header,
+	.admin-bar [data-sticky="true"] {
+		top: 0;
+	}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "vite-for-wordpress",
+  "version": "1.0.0",
+  "description": "High-performance WordPress starter theme powered by Vite, TypeScript and SCSS",
+  "author": "d1oxsnd (https://github.com/d1oxsnd)",
+  "homepage": "https://github.com/d1oxsnd/vite-for-wordpress",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d1oxsnd/vite-for-wordpress.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "zip": "npm run build && node scripts/zip.js"
+  },
+  "devDependencies": {
+    "@types/archiver": "^8.0.0",
+    "@types/node": "^26.6.5",
+    "archiver": "^8.0.0",
+    "sass": "^1.106.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vite-plugin-live-reload": "^4.0.0"
+  }
+}
